@@ -50,8 +50,72 @@ Com o pw-api-plugin, o relatório do Playwright mostra:
 Este repositório usa GitHub Actions para executar os testes automaticamente a cada push ou pull request.
 
 ## 📁 Exemplo de workflow (.github/workflows/playwright.yml):
-```
+```yaml
 
+name: Playwright Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  test-e2e-api:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Install Playwright Browsers (only Chromium)
+      run: npx playwright install chromium --with-deps
+
+    - name: Run Playwright API tests
+      env:
+        LOG_API_UI: 'true'
+        LOG_API_REPORT: 'true'
+      run: npx playwright test
+      
+    - uses: actions/upload-artifact@v4
+      if: ${{ !cancelled() }}
+      with:
+        name: playwright-report
+        path: playwright-report/
+        retention-days: 30
+
+  deploy-report-gh-pages:
+    needs: test-e2e-api
+    if: ${{ github.event_name == 'workflow_dispatch' }}
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Download Artifact Report HTML
+      uses: actions/download-artifact@v4
+      with:
+        name: playwright-report
+        path: ./report
+
+    - name: Configure GitHub Pages
+      uses: actions/configure-pages@v5
+
+    - name: Send Report to GitHub Pages
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./report 
+
+    - name: Deploy GitHub Pages
+      uses: actions/deploy-pages@v4
 ```
 
  
