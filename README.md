@@ -56,7 +56,7 @@ Com o pw-api-plugin, o relatório do Playwright mostra:
 	•	Códigos de status, tempo de resposta e cabeçalhos
 	•	Visualização embutida no Playwright UI
 
-⸻
+---
 
 ## ⚙️ Integração com GitHub Actions
 
@@ -130,7 +130,11 @@ jobs:
     - name: Deploy GitHub Pages
       uses: actions/deploy-pages@v4
 ```
-
+---
  
-## Visualizar relatório HTML de pw-api-plugin GH-PAGES
+##  📄 Relatório de Testes (GitHub Pages)
+
+Os testes automatizados são executados automaticamente via GitHub Actions e o **relatório Playwright HTML** é publicado no GitHub Pages após rodar manualmente o workflow nas actions.
+
+📍 Acesse o relatório mais recente:
 Acesse [📊 Relatório Executado](https://ciboto.github.io/api-playwright-tests/)
