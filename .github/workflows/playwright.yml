@@ -1,10 +1,19 @@
 name: Playwright Tests
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  test:
+  test-e2e-api:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
@@ -31,3 +40,26 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
+
+  deploy:
+    needs: test-e2e-api
+    if: ${{ github.event_name == 'workflow_dispatch' }}
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Baixar artefato do relatório
+      uses: actions/download-artifact@v4
+      with:
+        name: playwright-report
+        path: ./report
+
+    - name: Configurar GitHub Pages
+      uses: actions/configure-pages@v5
+
+    - name: Enviar relatório para GitHub Pages
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./report  # Essa é a pasta do relatório
+
+    - name: Fazer deploy no GitHub Pages
+      uses: actions/deploy-pages@v4
