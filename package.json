@@ -1,0 +1,26 @@
+{
+  "name": "api-playwright-tests",
+  "version": "1.0.0",
+  "description": "Repositório com testes automatizados API usando Playwright, integrados com o plugin pw‑api‑plugin. Esse plugin aparece nas execuções no UI do Playwright, exibindo detalhes de cada chamada HTTP diretamente na interface e nos relatórios finais",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ciboto/api-playwright-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ciboto/api-playwright-tests/issues"
+  },
+  "homepage": "https://github.com/ciboto/api-playwright-tests#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.54.1",
+    "@types/node": "^24.0.15",
+    "pw-api-plugin": "^2.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.0"
+  }
+}
