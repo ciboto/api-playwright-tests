@@ -24,15 +24,16 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
+    - name: Install Playwright Browsers (only Chromium)
+      run: npx playwright install chromium --with-deps
 
-    - name: Run Playwright tests
+    - name: Run Playwright API tests
       env:
         LOG_API_UI: 'true'
         LOG_API_REPORT: 'true'
       run: npx playwright test
       
+    - name: Upload Artifact HTML
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
@@ -40,9 +41,9 @@ jobs:
         path: playwright-report/
         retention-days: 30
 
-  deploy:
+  deploy-report-gh-pages:
     needs: test-e2e-api
-    # if: ${{ github.event_name == 'workflow_dispatch' }}
+    if: ${{ github.event_name == 'workflow_dispatch' }}
     runs-on: ubuntu-latest
 
     steps:
@@ -58,7 +59,7 @@ jobs:
     - name: Send Report to GitHub Pages
       uses: actions/upload-pages-artifact@v3
       with:
-        path: ./report  # Essa é a pasta do relatório
+        path: ./report 
 
-    - name: Fazer deploy no GitHub Pages
+    - name: Deploy GitHub Pages
       uses: actions/deploy-pages@v4
