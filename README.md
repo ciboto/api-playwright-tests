@@ -137,4 +137,9 @@ jobs:
 Os testes automatizados são executados automaticamente via GitHub Actions e o **relatório Playwright HTML** é publicado no GitHub Pages após rodar manualmente o workflow nas actions.
 
 📍 Acesse o relatório mais recente:
+
 Acesse [📊 Relatório Executado](https://ciboto.github.io/api-playwright-tests/)
+---
+## 📌 Observações
+	•	Este projeto é voltado para testes de API, mas pode ser facilmente adaptado para testes E2E.
+	•	O pw-api-plugin funciona bem em conjunto com o modo headless ou UI.
