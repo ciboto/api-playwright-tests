@@ -33,7 +33,6 @@ jobs:
         LOG_API_REPORT: 'true'
       run: npx playwright test
       
-    - name: Upload Artifact HTML
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
