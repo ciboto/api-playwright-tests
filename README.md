@@ -12,7 +12,20 @@ Repositório com testes automatizados de **API** usando o [Playwright](https://p
 - 💻 **Node.js** — ambiente de execução JavaScript
 
 ---
+## 📁 Estrutura do Projeto
+```api-playwright-tests/
+├── tests/                 # Casos de testes automatizados
+├── .github/workflows/     # Workflows do GitHub Actions
+├── playwright.config.ts   # Configuração do Playwright
+├── package.json           # Dependências e scripts
+└── README.md              # Documentação
 
+```
+---
+## ✅ Requisitos
+	•	Node.js v18 ou superior
+	•	npm ou yarn
+---
 ## 📦 Instalação
 
 Clone o repositório e instale as dependências:
