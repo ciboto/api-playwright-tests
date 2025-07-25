@@ -38,10 +38,14 @@ npm install
 ---
 ## Como Executar os Testes
 1. Executar testes via CLI:
+- Mode UI:
 ```
-npx playwright test
+LOG_API_UI=true LOG_API_REPORT=true npx playwright test --ui
 ```
-
+- Mode Headless:
+ ```
+LOG_API_REPORT=true npx playwright test
+```
 2. Abrir Report da execução local:
 ```
 npx playwright show-report
@@ -51,16 +55,15 @@ npx playwright show-report
 ## 📊 Relatórios com pw-api-plugin
 
 Com o pw-api-plugin, o relatório do Playwright mostra:
-	•	Detalhes das chamadas HTTP feitas nos testes
-	•	Payload de requisição e resposta
-	•	Códigos de status, tempo de resposta e cabeçalhos
-	•	Visualização embutida no Playwright UI
-
+- Detalhes das chamadas HTTP feitas nos testes
+- Payload de requisição e resposta
+- Códigos de status, tempo de resposta e cabeçalhos
+- Visualização embutida no Playwright UI
 ---
 
 ## ⚙️ Integração com GitHub Actions
 
-Este repositório usa GitHub Actions para executar os testes automaticamente a cada push ou pull request.
+Os testes automatizados são executados via GitHub Actions, acionados automaticamente por eventos de push e pull request, ou manualmente através da opção workflow dispatch.
 
 ## 📁 Exemplo de workflow (.github/workflows/playwright.yml):
 ```yaml
@@ -133,12 +136,10 @@ jobs:
 ---
  
 ##  📄 Relatório de Testes (GitHub Pages)
-
 Os testes automatizados são executados automaticamente via GitHub Actions e o **relatório Playwright HTML** é publicado no GitHub Pages após rodar manualmente o workflow nas actions.
-
 📍 Acesse o relatório mais recente:
 
-Acesse [📊 Relatório Executado](https://ciboto.github.io/api-playwright-tests/)
+ - [📊 Relatório Executado](https://ciboto.github.io/api-playwright-tests/)
 ---
 ## 📌 Observações
 	•	Este projeto é voltado para testes de API, mas pode ser facilmente adaptado para testes E2E.
