@@ -29,7 +29,6 @@ jobs:
 
     - name: Run Playwright API tests
       env:
-        LOG_API_UI: 'true'
         LOG_API_REPORT: 'true'
       run: npx playwright test
       
