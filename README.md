@@ -1,4 +1,4 @@
-# <img src="https://playwright.dev/img/playwright-logo.svg" alt="Playwright Logo" width="40" /> api-playwright-tests
+# <img src="https://playwright.dev/img/playwright-logo.svg" alt="Playwright Logo" width="40" /> Testes Automatizados de API com Playwright + pw-api-plugin
 ![License](https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-lightgrey?style=for-the-badge)
 ![Playwright API](https://img.shields.io/badge/Playwright_API-Tested-brightgreen?logo=playwright&logoColor=white&style=for-the-badge)
 
