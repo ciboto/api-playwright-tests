@@ -1,6 +1,6 @@
 # <img src="https://playwright.dev/img/playwright-logo.svg" alt="Playwright Logo" width="40" /> api-playwright-tests
 ![License](https://img.shields.io/badge/license-CC_BY--NC--ND_4.0-lightgrey.svg)
-![Playwright](https://img.shields.io/badge/Playwright-282C34?style=for-the-badge&logo=playwright&logoColor=white)
+![Playwright API](https://img.shields.io/badge/Playwright%20API-Tested-brightgreen?logo=playwright&logoColor=white&style=for-the-badge)
 
 Repositório com testes automatizados de **API** usando o [Playwright](https://playwright.dev/), integrados ao plugin [`pw-api-plugin`](https://www.npmjs.com/package/pw-api-plugin). O plugin permite visualizar detalhes de cada requisição HTTP diretamente na **interface do Playwright UI** e nos **relatórios de execução**
 
