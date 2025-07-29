@@ -63,7 +63,7 @@ Com o pw-api-plugin, o relatório do Playwright mostra:
 - Códigos de status, tempo de resposta e cabeçalhos
 - Visualização embutida no Playwright UI
 
-![Report PW Preview](assets/report-preview.png)
+![Report PW Preview](assets/report-preview.PNG)
 ---
 
 ## ⚙️ Integração com GitHub Actions
