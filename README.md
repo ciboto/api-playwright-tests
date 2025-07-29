@@ -1,4 +1,6 @@
 # <img src="https://playwright.dev/img/playwright-logo.svg" alt="Playwright Logo" width="40" /> api-playwright-tests
+![License](https://img.shields.io/badge/license-CC_BY--NC--ND_4.0-lightgrey.svg)
+![Playwright](https://img.shields.io/badge/Playwright-282C34?style=for-the-badge&logo=playwright&logoColor=white)
 
 Repositório com testes automatizados de **API** usando o [Playwright](https://playwright.dev/), integrados ao plugin [`pw-api-plugin`](https://www.npmjs.com/package/pw-api-plugin). O plugin permite visualizar detalhes de cada requisição HTTP diretamente na **interface do Playwright UI** e nos **relatórios de execução**
 
@@ -17,7 +19,8 @@ Repositório com testes automatizados de **API** usando o [Playwright](https://p
 ├── tests/                 # Casos de testes automatizados
 ├── .github/workflows/     # Workflows do GitHub Actions
 ├── playwright.config.ts   # Configuração do Playwright
-├── package.json           # Dependências e scripts
+├── package.json           # Configurações e scripts
+├── package-lock.json           # Dependências
 └── README.md              # Documentação
 
 ```
@@ -145,3 +148,7 @@ Os testes automatizados são executados automaticamente via GitHub Actions e o *
 ## 📌 Observações
 	•	Este projeto é voltado para testes de API, mas pode ser facilmente adaptado para testes E2E.
 	•	O pw-api-plugin funciona bem em conjunto com o modo headless ou UI.
+
+---
+## ⚖️ Licença
+Este projeto está licenciado sob a [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) - Consulte o arquivo [LICENSE](./LICENSE) para mais detalhes.
