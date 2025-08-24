@@ -182,8 +182,8 @@ Os testes automatizados são executados automaticamente via GitHub Actions e o *
 ---
 ## 📌 Observações
 	•	Este projeto é voltado para testes de API, mas pode ser facilmente adaptado para testes E2E.
-	•	O pw-api-plugin funciona bem em conjunto com o modo headless ou UI.
-  • A documentação Swagger é fake (usando swagger-helper.ts), simulando endpoints para estudo de automação de APIs.
+	•	O pw-api-plugin funciona bem em conjunto com o modo headless ou UI. 
+	•   A documentação Swagger é fake (usando swagger-helper.ts), simulando endpoints para estudo de automação de APIs.
 
 ---
 ## ⚖️ Licença
