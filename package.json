@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Repositório com testes automatizados API usando Playwright, integrados com o plugin pw‑api‑plugin. Esse plugin aparece nas execuções no UI do Playwright, exibindo detalhes de cada chamada HTTP diretamente na interface e nos relatórios finais",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "generate-swagger": "ts-node --compiler-options \"{\\\"module\\\":\\\"CommonJS\\\"}\" ./swagger/swagger.ts"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ciboto/api-playwright-tests.git"
@@ -17,10 +19,17 @@
   "homepage": "https://github.com/ciboto/api-playwright-tests#readme",
   "devDependencies": {
     "@playwright/test": "^1.54.1",
-    "@types/node": "^24.0.15",
-    "pw-api-plugin": "^2.0.2"
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.2.1",
+    "@types/swagger-ui-express": "^4.1.8",
+    "pw-api-plugin": "^2.0.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
   },
   "dependencies": {
-    "dotenv": "^17.2.0"
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1"
   }
 }

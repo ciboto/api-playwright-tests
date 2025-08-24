@@ -1,0 +1,255 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API Playwright Tests",
+    "description": "Documentação da API testada pelo Playwright",
+    "version": "1.0.0"
+  },
+  "host": "jsonplaceholder.typicode.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/posts": {
+      "get": {
+        "tags": [
+          "Posts"
+        ],
+        "description": "Retorna todos os posts",
+        "responses": {
+          "200": {
+            "description": "Lista de posts",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "userId": {
+                    "type": "number",
+                    "example": 1
+                  },
+                  "id": {
+                    "type": "number",
+                    "example": 1
+                  },
+                  "title": {
+                    "type": "string",
+                    "example": "..."
+                  },
+                  "body": {
+                    "type": "string",
+                    "example": "..."
+                  }
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Posts"
+        ],
+        "description": "Cria um novo post",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados do post",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "example": "foo"
+                },
+                "body": {
+                  "type": "string",
+                  "example": "bar"
+                },
+                "userId": {
+                  "type": "number",
+                  "example": 1
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "201": {
+            "description": "Post criado",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number",
+                  "example": 101
+                },
+                "title": {
+                  "type": "string",
+                  "example": "foo"
+                },
+                "body": {
+                  "type": "string",
+                  "example": "bar"
+                },
+                "userId": {
+                  "type": "number",
+                  "example": 1
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/posts/{id}": {
+      "get": {
+        "tags": [
+          "Posts"
+        ],
+        "description": "Retorna um post por ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "description": "ID do post"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Post encontrado",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "userId": {
+                  "type": "number",
+                  "example": 1
+                },
+                "id": {
+                  "type": "number",
+                  "example": 1
+                },
+                "title": {
+                  "type": "string",
+                  "example": "..."
+                },
+                "body": {
+                  "type": "string",
+                  "example": "..."
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Posts"
+        ],
+        "description": "Atualiza um post",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "description": "ID do post"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Dados atualizados",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number",
+                  "example": 1
+                },
+                "title": {
+                  "type": "string",
+                  "example": "foo"
+                },
+                "body": {
+                  "type": "string",
+                  "example": "bar"
+                },
+                "userId": {
+                  "type": "number",
+                  "example": 1
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Post atualizado",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number",
+                  "example": 1
+                },
+                "title": {
+                  "type": "string",
+                  "example": "foo"
+                },
+                "body": {
+                  "type": "string",
+                  "example": "bar"
+                },
+                "userId": {
+                  "type": "number",
+                  "example": 1
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Posts"
+        ],
+        "description": "Deleta um post",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "description": "ID do post"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Post deletado"
+          }
+        }
+      }
+    }
+  }
+}
