@@ -1,7 +1,7 @@
 # <img src="https://playwright.dev/img/playwright-logo.svg" alt="Playwright Logo" width="40" /> Testes Automatizados de API com Playwright + pw-api-plugin
 ![License](https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-lightgrey?style=for-the-badge)
 ![Playwright API](https://img.shields.io/badge/Playwright_API-Tested-brightgreen?logo=playwright&logoColor=white&style=for-the-badge)
-![Swagger](https://img.shields.io/badge/Swagger-AutoGen-brightgreen?logo=swagger)
+![Swagger](https://img.shields.io/badge/Swagger-AutoGen-brightgreen?style=for-the-badge)
 ![CI/CD](https://img.shields.io/github/actions/workflow/status/ciboto/api-playwright-tests/playwright.yml?style=for-the-badge)
 
 Repositório com testes automatizados de **API** usando o [Playwright](https://playwright.dev/), integrados ao plugin [`pw-api-plugin`](https://www.npmjs.com/package/pw-api-plugin).  
@@ -42,7 +42,7 @@ npx ts-node docs/swagger-server.ts
 - 🔌 **pw-api-plugin** — exibe chamadas HTTP no Playwright UI
 - 🧪 **GitHub Actions** — integração contínua (CI)
 - 💻 **Node.js** — ambiente de execução JavaScript
-- 📑 Swagger Autogen — gera documentação da API automaticamente
+- 📑 **Swagger Autogen** — gera documentação da API automaticamente
 
 ---
 ## 📁 Estrutura do Projeto
